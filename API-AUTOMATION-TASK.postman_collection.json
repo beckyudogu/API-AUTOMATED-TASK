@@ -1,0 +1,279 @@
+{
+	"info": {
+		"_postman_id": "37a5604a-00aa-4d4f-89b0-53fbba11da3a",
+		"name": "API-AUTOMATION-TASK",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET",
+			"item": [
+				{
+					"name": "Get All Todo Entries",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "94187f40-f8f8-47fa-867f-11a15cf0578d",
+								"exec": [
+									"pm.test(\"status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"pm.test(\"status code name has string\", function () {\r",
+									"    pm.response.to.have.status(\"OK\");\r",
+									"});\r",
+									"pm.test(\"content-Type is present\", function () {\r",
+									"    pm.response.to.have.header(\"content-Type\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://www.postman.com/collections/e69e2ce61fce209055fc",
+							"protocol": "https",
+							"host": [
+								"www",
+								"postman",
+								"com"
+							],
+							"path": [
+								"collections",
+								"e69e2ce61fce209055fc"
+							]
+						},
+						"description": "https://www.postman.com/collections/e69e2ce61fce209055fc"
+					},
+					"response": []
+				},
+				{
+					"name": "Get all entries",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "6d8a87cc-10a1-4e87-9feb-3e925a99fda0",
+								"exec": [
+									"pm.test(\"status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"pm.test(\"status code name has string\", function () {\r",
+									"    pm.response.to.have.status(\"OK\");\r",
+									"});\r",
+									"pm.test(\"content-Type is present\", function () {\r",
+									"    pm.response.to.have.header(\"content-Type\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\"content\": \"My first blog post\"",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://docs.postman-echo.com",
+							"protocol": "https",
+							"host": [
+								"docs",
+								"postman-echo",
+								"com"
+							]
+						},
+						"description": "pm.test(\"status code is 200\", function () {\r\n    pm.response.to.have.status(200);\r\n});\r\npm.test(\"status code name has string\", function () {\r\n    pm.response.to.have.status(\"OK\");\r\n});\r\npm.test(\"content-Type is present\", function () {\r\n    pm.response.to.have.header(\"content-Type\");\r\n});"
+					},
+					"response": []
+				},
+				{
+					"name": "Get entry per ID",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "b41adf7d-927b-45cc-93e5-93d1ec029476",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"pm.test(\"status code name has string\", function () {\r",
+									"    pm.response.to.have.status(\"OK\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"content-Type is present\", function () {\r",
+									"    pm.response.to.have.header(\"content-Type\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://www.postman.com/collections/e69e2ce61fce209055fc",
+							"protocol": "https",
+							"host": [
+								"www",
+								"postman",
+								"com"
+							],
+							"path": [
+								"collections",
+								"e69e2ce61fce209055fc"
+							]
+						},
+						"description": "https://www.postman.com/collections/e69e2ce61fce209055fc"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "POST",
+			"item": [
+				{
+					"name": "create a new entry",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "2181dfbb-01e8-4833-8ce3-ec383def22c4",
+								"exec": [
+									"pm.test(\"Status code is 400\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"});\r",
+									"pm.test(\"content-Type is present\", function () {\r",
+									"    pm.response.to.have.header(\"content-Type\");\r",
+									"});\r",
+									"pm.test(\"status code name has string\", function () {\r",
+									"    pm.response.to.have.status(\"Bad Request\");\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://www.postman.com/collections/e69e2ce61fce209055fc",
+							"protocol": "https",
+							"host": [
+								"www",
+								"postman",
+								"com"
+							],
+							"path": [
+								"collections",
+								"e69e2ce61fce209055fc"
+							]
+						},
+						"description": "https://www.postman.com/collections/e69e2ce61fce209055fc"
+					},
+					"response": []
+				},
+				{
+					"name": "create blog post",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"content\": \"My first blog post :)\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://www.postman.com/collections/e69e2ce61fce209055fc",
+							"protocol": "https",
+							"host": [
+								"www",
+								"postman",
+								"com"
+							],
+							"path": [
+								"collections",
+								"e69e2ce61fce209055fc"
+							]
+						},
+						"description": "https://www.postman.com/collections/e69e2ce61fce209055fc"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "DELETE",
+			"item": [
+				{
+					"name": "DELETE A TODO PER ID",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "9bb97336-9545-41c4-97b5-0391e540c897",
+								"exec": [
+									"pm.test(\"Status code is 500\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"});\r",
+									"pm.test(\"Response time is less than 1000ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(1000);\r",
+									"});\r",
+									"pm.test(\"content-Type is present\", function () {\r",
+									"    pm.response.to.have.header(\"content-Type\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://www.postman.com/collections/e69e2ce61fce209055fc",
+							"protocol": "https",
+							"host": [
+								"www",
+								"postman",
+								"com"
+							],
+							"path": [
+								"collections",
+								"e69e2ce61fce209055fc"
+							]
+						},
+						"description": "https://www.postman.com/collections/e69e2ce61fce209055fc"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
